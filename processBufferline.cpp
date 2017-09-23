@@ -59,15 +59,15 @@ std::string processBufferLine(const std::string& bufferLine,int& cursor)
 	 std::string         	lexeme = "";
 	 
 	 while (
-				bufferLine[cursor] != ' ' 							&& 	// if it is not a space 
-				cursor <= stringLength 								&& 	// if the cursor is not passed the last character of bufferLine 
-				!isSpecialSymbls (bufferLine[cursor] ) 				&& 	// if the current character is not a symbol 
-				!isComment(bufferLine[cursor], cursor, bufferLine)	 	// if the current character is not par t of the marker
+				bufferLine[cursor] != ' '                          &&//if it is not a space 
+				cursor <= stringLength                             &&// if the cursor is not passed the last character of bufferLine 
+				!isSpecialSymbls (bufferLine[cursor] )             &&// if the current character is not a symbol 
+				!isComment(bufferLine[cursor], cursor, bufferLine)   // if the current character is not par t of the marker
 			)
 	 {// do the folllowing while loop is valid
 		 lexeme = lexeme + bufferLine[cursor];
 		 cursor = cursor + 1;			 
-	 }// end of while loop
+	 }// end of while loop  
 	 
 	 if (isSpecialSymbls(bufferLine[cursor])) // if the loop ended because of special symbol
 	 { 
