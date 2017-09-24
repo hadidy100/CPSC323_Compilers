@@ -54,10 +54,7 @@ Language = a* (a+b) c* is NDFA so we convert it to DFA as bellow based on the fo
                    \     /<<====== b or c <<========/
                     \---/
                            
-                   State{b}      
-                                 
-                                 
-                                 
+                   State{b}                                                                   
 */
 #include <iostream>
 #include <string> 
